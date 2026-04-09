@@ -15,7 +15,6 @@ async function bootstrap(): Promise<void> {
       process.env.NODE_ENV === 'production'
         ? ['https://yourdomain.com']
         : ['http://localhost:3000'],
-    credentials: true,
   });
 
   // Global validation pipe
