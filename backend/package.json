@@ -25,7 +25,7 @@
     "db:seed": "prisma db seed",
     "db:studio": "prisma studio",
     "db:reset": "prisma migrate reset",
-    "prepare": "husky install",
+    "prepare": "[ -d .git ] && husky install || true",
     "type-check": "tsc --noEmit"
   },
   "dependencies": {

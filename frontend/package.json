@@ -15,7 +15,7 @@
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest --coverage",
-    "prepare": "husky install"
+    "prepare": "[ -d .git ] && husky install || true"
   },
   "dependencies": {
     "next": "^14.0.0",
