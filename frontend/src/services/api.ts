@@ -5,7 +5,7 @@ const TOKEN_KEY = 'access_token';
 
 const api: AxiosInstance = axios.create({
   baseURL: API_URL,
-  withCredentials: true,
+  timeout: 10000,
 });
 
 // Attach JWT token to every request

@@ -14,11 +14,18 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   useEffect(() => {
     const initializeAuth = async (): Promise<void> => {
+      const token = authService.getToken();
+      if (!token) {
+        setIsLoading(false);
+        return;
+      }
+
       try {
         const currentUser = await authService.getCurrentUser();
         setUser(currentUser);
         setError(null);
       } catch {
+        authService.removeToken();
         setUser(null);
       } finally {
         setIsLoading(false);
