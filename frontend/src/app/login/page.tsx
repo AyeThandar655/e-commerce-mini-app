@@ -174,7 +174,7 @@ function LoginContent(): React.ReactElement {
             <p className="text-sm text-blue-900">
               <strong>Demo credentials:</strong>
               <br />
-              Email: demo@example.com
+              Email: test@example.com
               <br />
               Password: password123
             </p>
